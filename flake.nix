@@ -14,7 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    yazelix.url = "github:Yazelix/nova/stable";
+    xyzide = {
+      url = "github:ashqqy/xyzide";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -34,7 +37,6 @@
             home-manager.users.artiom = {
               imports = [
                 ./home/home.nix
-                inputs.yazelix.homeManagerModules.default
               ];
             };
           }

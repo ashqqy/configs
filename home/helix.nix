@@ -6,6 +6,7 @@
       theme = "ayu_evolve";
       editor = {
         line-number = "relative";
+        buferline = "multiple";
       };
     };
 

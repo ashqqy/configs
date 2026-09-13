@@ -12,10 +12,10 @@
     };
 
     shellAliases = {
-      switch = "sudo nixos-rebuild switch --flake ~/configs";
+      switch = "sudo nixos-rebuild switch --flake ~/configs#nixos";
       update = "sudo nix flake update";
+      garbage = "sudo nix-collect-garbage -d";
       y = "yazi";
-      ide = "zellij --layout ide";
     };
   };
 }

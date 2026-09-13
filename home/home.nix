@@ -1,3 +1,5 @@
+{ pkgs, inputs, ... }:
+
 {
   home.username = "artiom";
   home.homeDirectory = "/home/artiom";
@@ -9,7 +11,12 @@
     ./zsh.nix
     ./kitty.nix
     ./helix.nix
-    ./yazelix.nix
-    ./zellij.nix
+  ];
+
+  home.packages = with pkgs; [
+    zellij
+    inputs.xyzide.packages.${pkgs.system}.default
+    opencode
+    claude-code
   ];
 }
