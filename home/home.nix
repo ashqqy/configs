@@ -11,6 +11,8 @@
     ./zsh.nix
     ./kitty.nix
     ./helix.nix
+    ./yazi.nix
+    ./git.nix
   ];
 
   home.packages = with pkgs; [

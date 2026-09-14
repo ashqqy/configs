@@ -15,21 +15,10 @@
   programs.wireshark.enable = true;
 
   environment.systemPackages = with pkgs; [
-    yazi
-    kitty
-    helix
-    git
-
     firefox
     telegram-desktop
 
     vial
-
-    nixd
-    nixfmt
-    clang-tools
-    bash-language-server
-    shfmt
   ];
 
   services.udev.packages = [ pkgs.vial ];
