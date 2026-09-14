@@ -16,7 +16,8 @@
   home.packages = with pkgs; [
     zellij
     inputs.xyzide.packages.${pkgs.system}.default
-    opencode
     claude-code
   ];
+
+  programs.z-lua.enable = true;
 }
