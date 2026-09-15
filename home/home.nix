@@ -17,7 +17,7 @@
 
   home.packages = with pkgs; [
     zellij
-    inputs.xyzide.packages.${pkgs.system}.default
+    inputs.xyzide.packages.${pkgs.stdenv.hostPlatform.system}.default
     claude-code
   ];
 

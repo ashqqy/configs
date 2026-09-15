@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -7,7 +7,7 @@
   
   programs.niri.enable = true;
   
-  programs.noctalia-greeter.enable = true;
+  services.displayManager.noctalia-greeter.enable = true;
   
   environment.systemPackages = with pkgs; [
     noctalia-shell
