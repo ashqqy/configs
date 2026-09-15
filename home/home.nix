@@ -13,6 +13,7 @@
     ./helix.nix
     ./yazi.nix
     ./git.nix
+    ./niri.nix
   ];
 
   home.packages = with pkgs; [

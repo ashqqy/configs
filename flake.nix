@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     xyzide = {
       url = "github:ashqqy/xyzide";
       inputs.nixpkgs.follows = "nixpkgs";
