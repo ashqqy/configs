@@ -28,35 +28,19 @@
   outputs =
     { nixpkgs, ... }@inputs:
     let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
       mkHost =
-        host:
+        system: host:
         nixpkgs.lib.nixosSystem {
+          inherit system;
           specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/${host}
-
-            inputs.home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.artiom = {
-                imports = [
-                  ./home/home.nix
-                ];
-              };
-            }
-          ];
+          modules = [ ./hosts/${host} ];
         };
     in
     {
-      formatter.x86_64-linux = pkgs.nixfmt-tree;
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
 
       nixosConfigurations = {
-        homebook = mkHost "homebook";
+        homebook = mkHost "x86_64-linux" "homebook";
       };
     };
 }

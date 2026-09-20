@@ -2,15 +2,15 @@
   imports = [
     ./hardware-configuration.nix
     ./swap.nix
-    ./niri-outputs.nix
     ./vial.nix
 
     ../../system/system.nix
     ../../system/user.nix
+    ../../system/home-manager.nix
     ../../system/wayland.nix
     ../../system/throne.nix
     ../../system/fonts.nix
-    ../../system/dev.nix
+    ../../system/virtualisation.nix
   ];
 
   networking.hostName = "homebook";

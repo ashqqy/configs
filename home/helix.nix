@@ -1,4 +1,4 @@
-{ ... }:
+{ hostName, ... }:
 
 {
   programs.helix = {
@@ -19,8 +19,8 @@
           config.nixd = {
             nixpkgs.expr = "import (builtins.getFlake (builtins.toString ./.)).inputs.nixpkgs {}";
             options = {
-              nixos.expr = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.nixos.options";
-              home-manager.expr = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.nixos.options.home-manager.users.type.getSubOptions []";
+              nixos.expr = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.${hostName}.options";
+              home-manager.expr = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.${hostName}.options.home-manager.users.type.getSubOptions []";
             };
           };
         };

@@ -1,11 +1,14 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  hostName,
+  ...
+}:
 
 {
-  home.stateVersion = "26.05";
-
-  programs.home-manager.enable = true;
-
   imports = [
+    ./hosts/${hostName}.nix
+
     ./zsh.nix
     ./kitty.nix
     ./helix.nix
@@ -14,6 +17,8 @@
     ./niri.nix
     ./dev.nix
   ];
+
+  programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
     firefox
