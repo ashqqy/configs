@@ -1,6 +1,4 @@
 {
-  home.stateVersion = "26.05";
-
   programs.niri.settings.outputs = {
     "eDP-1" = {
       mode = {

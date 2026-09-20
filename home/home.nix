@@ -7,7 +7,7 @@
 
 {
   imports = [
-    ./hosts/${hostName}.nix
+    ./${hostName}
 
     ./zsh.nix
     ./kitty.nix
