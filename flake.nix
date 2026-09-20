@@ -28,6 +28,8 @@
   outputs =
     { nixpkgs, ... }@inputs:
     let
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
       mkHost =
         host:
         nixpkgs.lib.nixosSystem {
@@ -51,7 +53,7 @@
         };
     in
     {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter.x86_64-linux = pkgs.nixfmt-tree;
 
       nixosConfigurations = {
         homebook = mkHost "homebook";
