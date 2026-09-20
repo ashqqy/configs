@@ -6,6 +6,7 @@
 
   imports = [
     ./hardware-configuration.nix
+    ./system/swap.nix
     ./system/system.nix
     ./system/user.nix
     ./system/wayland.nix
