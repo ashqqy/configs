@@ -14,6 +14,7 @@
     ./yazi.nix
     ./git.nix
     ./niri.nix
+    ./dev.nix
   ];
 
   home.packages = with pkgs; [

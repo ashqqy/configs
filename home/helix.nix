@@ -1,14 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  home.packages = with pkgs; [
-    nixd
-    nixfmt
-    clang-tools
-    bash-language-server
-    shfmt
-  ];
-
   programs.helix = {
     enable = true;
 
