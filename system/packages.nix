@@ -2,9 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    firefox
-    telegram-desktop
-
     vial
   ];
 

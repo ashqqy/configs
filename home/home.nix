@@ -18,6 +18,9 @@
   ];
 
   home.packages = with pkgs; [
+    firefox
+    telegram-desktop
+
     zellij
     inputs.xyzide.packages.${pkgs.stdenv.hostPlatform.system}.default
     claude-code
