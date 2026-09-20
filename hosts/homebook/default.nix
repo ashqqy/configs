@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ./swap.nix
     ./niri-outputs.nix
+    ./vial.nix
 
     ../../profiles/personal.nix
 
@@ -15,7 +16,6 @@
     ../../system/user.nix
     ../../system/wayland.nix
     ../../system/programs.nix
-    ../../system/packages.nix
     ../../system/fonts.nix
   ];
 
