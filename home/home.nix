@@ -1,8 +1,6 @@
 { pkgs, inputs, ... }:
 
 {
-  home.username = "artiom";
-  home.homeDirectory = "/home/artiom";
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
@@ -27,4 +25,6 @@
   ];
 
   programs.z-lua.enable = true;
+
+  home.sessionVariables.EDITOR = "hx";
 }
