@@ -10,13 +10,12 @@
     ./niri-outputs.nix
     ./vial.nix
 
-    ../../profiles/personal.nix
-
     ../../system/system.nix
     ../../system/user.nix
     ../../system/wayland.nix
     ../../system/programs.nix
     ../../system/fonts.nix
+    ../../system/dev.nix
   ];
 
   networking.hostName = "homebook";
