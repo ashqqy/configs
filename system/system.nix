@@ -7,7 +7,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
-  networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
   # Bluetooth

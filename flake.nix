@@ -27,25 +27,32 @@
 
   outputs =
     { nixpkgs, ... }@inputs:
-    {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./configuration.nix
+    let
+      mkHost =
+        host:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/${host}
 
-          inputs.home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.artiom = {
-              imports = [
-                ./home/home.nix
-              ];
-            };
-          }
-        ];
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.users.artiom = {
+                imports = [
+                  ./home/home.nix
+                ];
+              };
+            }
+          ];
+        };
+    in
+    {
+      nixosConfigurations = {
+        homebook = mkHost "homebook";
       };
     };
 }
