@@ -6,10 +6,6 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./swap.nix
-    ./niri-outputs.nix
-
-    ../../profiles/personal.nix
 
     ../../system/system.nix
     ../../system/user.nix
@@ -19,7 +15,7 @@
     ../../system/fonts.nix
   ];
 
-  networking.hostName = "homebook";
+  networking.hostName = "workbook";
 
-  system.stateVersion = "26.05";
+  system.stateVersion = "26.11";
 }
