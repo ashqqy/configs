@@ -16,6 +16,7 @@
       update = "sudo nix flake update";
       garbage = "sudo nix-collect-garbage -d";
       y = "yazi";
+      cppfmt = "git ls-files -z '*.cpp' '*.hpp' '*.cc' '*.h' | xargs -0 -r clang-format -i";
     };
   };
 }

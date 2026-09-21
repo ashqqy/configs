@@ -9,6 +9,7 @@
       editor = {
         line-number = "relative";
         bufferline = "multiple";
+        lsp.display-inlay-hints = true;
       };
     };
 
@@ -55,6 +56,26 @@
               "2"
               "-ci"
             ];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "cpp";
+          language-servers = [ "clangd" ];
+          formatter = {
+            command = "clang-format";
+            args = [ "--assume-filename=%{buffer_name}" ];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "c";
+          language-servers = [ "clangd" ];
+          formatter = {
+            command = "clang-format";
+            args = [ "--assume-filename=%{buffer_name}" ];
           };
           auto-format = true;
         }

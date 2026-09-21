@@ -16,6 +16,7 @@
     ./git.nix
     ./niri.nix
     ./dev.nix
+    ./clangd.nix
   ];
 
   programs.home-manager.enable = true;
