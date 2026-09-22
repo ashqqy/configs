@@ -2,8 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    gcc
-    (lib.hiPrio clang)
+    gcc16
+    (lib.hiPrio llvmPackages_latest.clang)
 
     gnumake
     cmake
@@ -12,7 +12,7 @@
 
     nixd
     nixfmt
-    clang-tools
+    llvmPackages_latest.clang-tools
     bash-language-server
     shfmt
   ];
