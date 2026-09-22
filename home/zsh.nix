@@ -16,7 +16,7 @@
       update = "sudo nix flake update";
       garbage = "sudo nix-collect-garbage -d";
       y = "yazi";
-      cppfmt = "git ls-files -z '*.cpp' '*.hpp' '*.cc' '*.h' | xargs -0 -r clang-format -i";
+      cppfmt = "git ls-files -z '*.c' '*.h' '*.cpp' '*.hpp' | xargs -0 -r clang-format -i && git ls-files -z '*CMakeLists.txt' '*.cmake' | xargs -0 -r gersemi -i && git ls-files -z '*.json' '*.jsonc' | xargs -0 -r biome format --write --indent-style=space";
     };
   };
 }

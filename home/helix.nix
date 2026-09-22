@@ -94,6 +94,19 @@
           };
           auto-format = true;
         }
+
+        {
+          name = "json";
+          formatter = {
+            command = "biome";
+            args = [
+              "format"
+              "--indent-style=space"
+              "--stdin-file-path=%{buffer_name}"
+            ];
+          };
+          auto-format = true;
+        }
       ];
     };
   };
