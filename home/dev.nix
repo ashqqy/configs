@@ -2,20 +2,23 @@
 
 {
   home.packages = with pkgs; [
-    gcc16
+    gcc_latest
     (lib.hiPrio llvmPackages_latest.clang)
+    (lib.hiPrio llvmPackages_latest.llvm)
 
     gnumake
     cmake
-    gdb
     pkg-config
 
-    nixd
-    nixfmt
+    gdb
+    gcovr
+
     llvmPackages_latest.clang-tools
-    bash-language-server
-    shfmt
     neocmakelsp
     gersemi
+    nixd
+    nixfmt
+    bash-language-server
+    shfmt
   ];
 }
