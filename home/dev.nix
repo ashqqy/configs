@@ -16,5 +16,6 @@
     bash-language-server
     shfmt
     neocmakelsp
+    gersemi
   ];
 }

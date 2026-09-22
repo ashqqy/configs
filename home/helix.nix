@@ -88,6 +88,10 @@
         {
           name = "cmake";
           language-servers = [ "neocmakelsp" ];
+          formatter = {
+            command = "gersemi";
+            args = [ "-" ];
+          };
           auto-format = true;
         }
       ];
