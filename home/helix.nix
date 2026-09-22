@@ -34,6 +34,11 @@
           command = "bash-language-server";
           args = [ "start" ];
         };
+
+        neocmakelsp = {
+          command = "neocmakelsp";
+          args = [ "stdio" ];
+        };
       };
 
       language = [
@@ -77,6 +82,12 @@
             command = "clang-format";
             args = [ "--assume-filename=%{buffer_name}" ];
           };
+          auto-format = true;
+        }
+
+        {
+          name = "cmake";
+          language-servers = [ "neocmakelsp" ];
           auto-format = true;
         }
       ];

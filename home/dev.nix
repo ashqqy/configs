@@ -15,5 +15,6 @@
     llvmPackages_latest.clang-tools
     bash-language-server
     shfmt
+    neocmakelsp
   ];
 }
