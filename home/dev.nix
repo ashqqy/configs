@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    gcc_latest # gcov is next to the compiler, not in PATH
+    gcc_latest
     (lib.hiPrio llvmPackages_latest.clang)
     (lib.hiPrio llvmPackages_latest.llvm) # llvm-cov, llvm-ar, etc.
 
@@ -11,6 +11,7 @@
     pkg-config
 
     gdb
+    qemu
     gcovr # coverage reports
 
     llvmPackages_latest.clang-tools # clangd, clang-format
