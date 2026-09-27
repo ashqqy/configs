@@ -13,6 +13,7 @@
     gdb
     qemu
     gcovr # coverage reports
+    graphviz
 
     llvmPackages_latest.clang-tools # clangd, clang-format
     neocmakelsp # cmake lsp
