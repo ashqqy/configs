@@ -10,6 +10,11 @@
         line-number = "relative";
         bufferline = "multiple";
         lsp.display-inlay-hints = true;
+        cursor-shape = {
+          normal = "block";
+          insert = "bar";
+          select = "underline";
+        };
       };
     };
 
