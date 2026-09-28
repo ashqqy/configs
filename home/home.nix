@@ -26,6 +26,8 @@
     telegram-desktop
 
     zellij
+    zip
+    unzip
     inputs.xyzide.packages.${pkgs.stdenv.hostPlatform.system}.default
     claude-code
   ];
