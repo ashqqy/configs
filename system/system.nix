@@ -18,6 +18,9 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
+  # FHS /bin and /usr/bin
+  services.envfs.enable = true;
+
   # Time and Locale
   time.timeZone = "Europe/Moscow";
 
