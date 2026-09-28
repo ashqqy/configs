@@ -9,6 +9,7 @@
     gnumake
     cmake
     pkg-config
+    nasm
 
     gdb
     qemu
