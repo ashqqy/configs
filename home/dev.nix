@@ -5,6 +5,7 @@
     gcc_latest
     (lib.hiPrio llvmPackages_latest.clang)
     (lib.hiPrio llvmPackages_latest.llvm) # llvm-cov, llvm-ar, etc.
+    python3
 
     gnumake
     cmake
