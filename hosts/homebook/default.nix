@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -12,6 +14,8 @@
   ];
 
   networking.hostName = "homebook";
+
+  hardware.graphics.extraPackages = with pkgs; [ intel-media-driver ];
 
   system.stateVersion = "26.05";
 }

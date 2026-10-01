@@ -201,6 +201,15 @@
       "Ctrl+Print".action.screenshot-screen = [ ];
       "Alt+Print".action.screenshot-window = [ ];
 
+      "Shift+Print" = {
+        action = spawn-sh "screen-record-toggle --region";
+        hotkey-overlay.title = "Record a Region: wl-screenrec";
+      };
+      "Ctrl+Shift+Print" = {
+        action = spawn-sh "screen-record-toggle";
+        hotkey-overlay.title = "Record the Screen: wl-screenrec";
+      };
+
       "Mod+Escape" = {
         action = toggle-keyboard-shortcuts-inhibit;
         allow-inhibiting = false;

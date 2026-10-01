@@ -15,6 +15,7 @@
     ./yazi.nix
     ./git.nix
     ./niri.nix
+    ./screen-recording.nix
     ./dev.nix
     ./clangd.nix
   ];
