@@ -13,6 +13,7 @@
 
   # Networking
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 6767 ];
 
   # Bluetooth
   hardware.bluetooth.enable = true;
