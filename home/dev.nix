@@ -26,5 +26,6 @@
     nixfmt # nix formatter
     bash-language-server # bash lsp
     shfmt # shell formatter
+    shellcheck # shell linter
   ];
 }
