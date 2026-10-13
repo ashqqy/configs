@@ -26,6 +26,9 @@
   # FHS /bin and /usr/bin
   services.envfs.enable = true;
 
+  # Dynamically linked executables from outside nixpkgs
+  programs.nix-ld.enable = true;
+
   # Time and Locale
   time.timeZone = "Europe/Moscow";
 
