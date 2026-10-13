@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   # Nix
   nix.settings.experimental-features = [
@@ -28,6 +30,25 @@
 
   # Dynamically linked executables from outside nixpkgs
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    libglvnd
+    libxkbcommon
+    fontconfig
+    libx11
+    glib
+    freetype
+    dbus
+    wayland
+    libdrm
+    libxcrypt-legacy
+    libsecret
+    libxcb
+    libxcb-cursor
+    libxcb-image
+    libxcb-keysyms
+    libxcb-render-util
+    libxcb-wm
+  ];
 
   # Time and Locale
   time.timeZone = "Europe/Moscow";
