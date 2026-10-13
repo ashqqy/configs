@@ -27,6 +27,7 @@
     telegram-desktop
 
     zellij
+    file
     zip
     unzip
     inputs.xyzide.packages.${pkgs.stdenv.hostPlatform.system}.default
