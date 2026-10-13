@@ -17,6 +17,7 @@
     ./niri.nix
     ./screen-recording.nix
     ./dev.nix
+    ./ida.nix
     ./clangd.nix
   ];
 
