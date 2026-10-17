@@ -5,5 +5,6 @@
     ./home-manager.nix
     ./wayland.nix
     ./fonts.nix
+    ./programs/pwndbg.nix
   ];
 }

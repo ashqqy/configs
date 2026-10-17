@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 
 {
   home.packages = with pkgs; [
@@ -27,5 +32,8 @@
     bash-language-server # bash lsp
     shfmt # shell formatter
     shellcheck # shell linter
+
+    pwntools
+    inputs.pwndbg.packages.${pkgs.stdenv.hostPlatform.system}.pwndbg
   ];
 }

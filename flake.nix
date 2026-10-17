@@ -23,6 +23,8 @@
       url = "github:ashqqy/xyzide";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    pwndbg.url = "github:pwndbg/pwndbg";
   };
 
   outputs =
